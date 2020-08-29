@@ -21,4 +21,18 @@ Board::Board(std::ifstream& file)
 	}
 }
 
+/*
+	printing board aka 2-D matrix
+*/
+void Board::display_board(std::ostream& os)
+{
+	for (auto &row : board)
+	{
+		for (auto col : row)
+			os << col;
+
+		os << std::endl;
+	}
+}
+
 
