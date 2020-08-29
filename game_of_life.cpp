@@ -2,9 +2,14 @@
 //
 
 #include <iostream>
+#include "Board.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::ifstream file("Input.txt");
+
+    Board b(file);
+
+    b.display_board(std::cout);
 }
 
