@@ -12,6 +12,9 @@
 class Board
 {
 public:
+	using row = std::vector <std::vector<int>>::size_type;
+	using col = std::vector<int>::size_type;
+
 	/* 
 		constructors which read from text file and create 2-d matrix
 	*/
