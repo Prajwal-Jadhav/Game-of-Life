@@ -15,3 +15,10 @@ int Cell::get_new()
 	return new_state;
 }
 
+// here 1 is assumed alive
+void Cell::regenerate()
+{
+	old_state = new_state;
+	new_state = 1;
+}
+
