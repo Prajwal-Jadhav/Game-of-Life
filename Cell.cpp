@@ -22,3 +22,9 @@ void Cell::regenerate()
 	new_state = 1;
 }
 
+void Cell::kill()
+{
+	old_state = new_state;
+	new_state = 0;
+}
+
