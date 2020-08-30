@@ -15,7 +15,11 @@ int Cell::get_new()
 	return new_state;
 }
 
-// here 1 is assumed alive
+
+/* here 1 is assumed alive and 0 dead 
+   new state is saved in old state for reference for cells coming after because
+   newly born cell should't interfare with next cells
+*/
 void Cell::regenerate()
 {
 	old_state = new_state;
