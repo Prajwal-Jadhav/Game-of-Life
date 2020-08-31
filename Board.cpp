@@ -28,8 +28,8 @@ void Board::display_board(std::ostream& os)
 {
 	for (auto &row : board)
 	{
-		for (auto col : row)
-			os << col << " ";
+		for (auto &col : row)
+			os << col.get_new() << " ";
 
 		os << std::endl;
 	}
