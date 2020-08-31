@@ -26,6 +26,9 @@ Board::Board(std::ifstream& file)
 */
 void Board::display_board(std::ostream& os)
 {
+	os << "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n\n" << std::flush;
+	os << "Generation: " << generation << "\n" << std::endl;
+
 	for (auto &row : board)
 	{
 		for (auto &col : row)
@@ -33,6 +36,8 @@ void Board::display_board(std::ostream& os)
 
 		os << std::endl;
 	}
+
+	os << "\n\n" << std::flush;
 }
 
 
