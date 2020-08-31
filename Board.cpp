@@ -12,12 +12,12 @@ Board::Board(std::ifstream& file)
 	std::string line;
 	while (std::getline(file, line))
 	{
-		board.push_back(std::vector<int>());
+		board.push_back(std::vector<Cell>());
 
 		std::istringstream is(line);
 		int i = 0;
 		while (is >> i)
-			board.back().push_back(i);
+			board.back().push_back(Cell(i));
 	}
 }
 
