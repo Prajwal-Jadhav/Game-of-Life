@@ -5,6 +5,8 @@
 	and updating on each generation
 */
 
+#include "Cell.h"
+
 #include <vector>
 #include <fstream>
 #include <iostream>
@@ -12,8 +14,8 @@
 class Board
 {
 public:
-	using row = std::vector <std::vector<int>>::size_type;
-	using col = std::vector<int>::size_type;
+	using row = std::vector <std::vector<Cell>>::size_type;
+	using col = std::vector<Cell>::size_type;
 
 	/* 
 		constructors which read from text file and create 2-d matrix
@@ -25,6 +27,6 @@ public:
 
 private:
 	unsigned generation = 1;
-	std::vector<std::vector<int>> board;
+	std::vector<std::vector<Cell>> board;
 };
 
