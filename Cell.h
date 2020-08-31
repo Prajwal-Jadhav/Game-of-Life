@@ -8,10 +8,12 @@ public:
 
 	void regenerate();
 	void kill();
-	inline int get_old();
-	inline int get_new();
+
+	int get_old() { return old_state; };
+	int get_new() { return new_state; };
 private:
 	int old_state = 0;
 	int new_state = 0;
 };
+
 
