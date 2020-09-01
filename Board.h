@@ -24,8 +24,10 @@ public:
 	Board() = default;
 
 	void display_board(std::ostream& os); // for displaying 2-d matrix in terminal
+	void update_board();
 
 private:
+	std::size_t count_neighbours();
 	unsigned generation = 1;
 	std::vector<std::vector<Cell>> board;
 };
