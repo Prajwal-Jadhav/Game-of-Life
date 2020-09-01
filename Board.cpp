@@ -81,3 +81,26 @@ std::size_t Board::count_neighbours(row i, col j)
 }
 
 
+void Board::update_board()
+{
+	for (row i = 0; i != board.size(); ++i)
+	{
+		for (col j = 0; j != board[i].size(); ++j)
+		{
+			Cell& cell = board[i][j];
+
+			std::size_t count = count_neighbours(i, j);
+
+			if (count < 2 || count > 3)
+				cell.kill();
+			else if (cell.get_new() == 1 || count == 3)
+				cell.regenerate();
+			else
+				cell.kill(); // if cell has 2 neighbours and old_state = 1, new_state = 0
+		}
+	}
+
+	++generation;
+}
+
+
