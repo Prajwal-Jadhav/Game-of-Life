@@ -6,7 +6,7 @@
 
 int main()
 {
-    std::ifstream file("Input.txt");
+    std::ifstream file("Input.txt"); // file from which to read the initial configuration of board
 
     Board b(file);
 
