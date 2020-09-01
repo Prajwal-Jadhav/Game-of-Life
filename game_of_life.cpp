@@ -10,6 +10,16 @@ int main()
 
     Board b(file);
 
-    b.display_board(std::cout);
+    std::cout << "How many generations do you want?: " << std::flush;
+
+    int g_count = 0;
+    std::cin >> g_count;
+
+    for (int i = 0; i != g_count; ++i)
+    {
+        b.display_board(std::cout);
+        b.update_board();
+    }
+
 }
 
