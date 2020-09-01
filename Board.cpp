@@ -54,28 +54,28 @@ std::size_t Board::count_neighbours(row i, col j)
 	col col_last_index = board[0].size() - 1;
 
 	if (i != 0)
-		count += board[i - 1][j].get_old();
+		count += board[i - 1][j].get_old();     // upper cell
 
 	if (j != 0)
-		count += board[i][j - 1].get_old();
+		count += board[i][j - 1].get_old();     // left cell
 
 	if (i != row_last_index)
-		count += board[i + 1][j].get_new();
+		count += board[i + 1][j].get_new();     // downward cell
 
 	if (j != col_last_index)
-		count += board[i][j + 1].get_new();
+		count += board[i][j + 1].get_new();     // rightward cell
 
 	if (i != 0 && j != 0)
-		count += board[i - 1][j - 1].get_old();
+		count += board[i - 1][j - 1].get_old(); // upper left cell
 
 	if (i != 0 && j != col_last_index)
-		count += board[i - 1][j + 1].get_old();
+		count += board[i - 1][j + 1].get_old(); // upper right cell
 
 	if (i != row_last_index && j != col_last_index)
-		count += board[i + 1][j + 1].get_new();
+		count += board[i + 1][j + 1].get_new(); // downward right cell
 
 	if (i != row_last_index && j != 0)
-		count += board[i + 1][j - 1].get_new();
+		count += board[i + 1][j - 1].get_new(); // downward left cell
 
 	return count;
 }
