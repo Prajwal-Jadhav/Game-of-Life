@@ -27,7 +27,7 @@ public:
 	void update_board();
 
 private:
-	std::size_t count_neighbours();
+	std::size_t count_neighbours(row i, col j);
 	unsigned generation = 1;
 	std::vector<std::vector<Cell>> board;
 };
