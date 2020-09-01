@@ -37,11 +37,7 @@ void Board::display_board(std::ostream& os)
 		os << std::endl;
 	}
 
-	
-
 	os << "\n\n" << std::flush;
-
-	os << count_neighbours(13, 0) << std::endl;
 }
 
 /*
